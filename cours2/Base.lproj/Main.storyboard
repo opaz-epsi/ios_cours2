@@ -51,7 +51,7 @@
                                 <rect key="frame" x="123" y="74" width="457" height="30"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="dLg-Tf-lJu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="dLg-Tf-lJu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
