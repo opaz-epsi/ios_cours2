@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2sp-v3-w5k">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reddit Table View Controller-->
+        <scene sceneID="J81-On-YKY">
+            <objects>
+                <tableViewController id="J7l-qy-XvS" customClass="RedditTableViewController" customModule="cours2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6OH-C2-JSv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" id="ceO-4Q-gea" customClass="PostCell" customModule="cours2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ceO-4Q-gea" id="NaV-1n-f8y">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWC-46-CYP">
+                                            <rect key="frame" x="14" y="11" width="42" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="sWC-46-CYP" secondAttribute="trailing" id="JPl-Dh-Cn7"/>
+                                        <constraint firstItem="sWC-46-CYP" firstAttribute="centerY" secondItem="NaV-1n-f8y" secondAttribute="centerY" id="P7b-6P-TJ8"/>
+                                        <constraint firstItem="sWC-46-CYP" firstAttribute="leading" secondItem="NaV-1n-f8y" secondAttribute="leadingMargin" constant="6" id="QXJ-w1-Wzm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="postTitle" destination="sWC-46-CYP" id="FJ8-5E-hbB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="J7l-qy-XvS" id="fo3-yv-F5Q"/>
+                            <outlet property="delegate" destination="J7l-qy-XvS" id="EwS-CR-QZX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="SMh-TW-2Vn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BS7-nu-h2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="259"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OM4-gf-4Hr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2sp-v3-w5k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xhi-s0-BdE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J7l-qy-XvS" kind="relationship" relationship="rootViewController" id="pmS-Ju-7zi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlL-oI-p0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="259"/>
+        </scene>
+    </scenes>
+</document>
